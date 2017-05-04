@@ -2,7 +2,7 @@ package com.epai.core.pojo.product;
 
 import java.io.Serializable;
 
-import com.itheima.common.web.Constants;
+import com.epai.common.web.Constants;
 
 /**
  * 品牌
@@ -89,7 +89,7 @@ public class BrandQuery implements Serializable{
 	//当前页
 	private Integer pageNo = 1;
 	//每页数
-	private Integer pageSize = Constants.BRANDPAGESIZE;
+	private Integer pageSize = Constants.PAGE_NO;
 	//开始行
 	private Integer startRow;
 	
