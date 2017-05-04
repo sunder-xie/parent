@@ -18,8 +18,8 @@ public class TestServiceImpl implements TestService{
 	@Override
 	public void insertTb(TestTb tb) {
 		dao.insertTb(tb);
-		int a = 10/0;
-		dao.insertTb(tb);
+//		int a = 10/0;
+//		dao.insertTb(tb);
 	}
 	
 	

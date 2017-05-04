@@ -25,7 +25,7 @@
 	<!-- 注解驱动 -->
 	<mvc:annotation-driven/> <!--conversion-service="conversionServiceFactoryBean"/>-->
 	
-	<!--<import resource="dubbo-consumer.xml"/>-->
+	<import resource="dubbo-consumer.xml"/>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/console/"></property>
@@ -37,11 +37,10 @@
 	<!--<bean id="conversionServiceFactoryBean" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
 		<!--&lt;!&ndash; 转换器集 &ndash;&gt;-->
 		<!--<property name="converters">-->
-			<!--<set>-->
-				<!--<list>-->
-					<!--<bean class="com.epai.common.conversion.TrimConverter"/>-->
-				<!--</list>-->
-			<!--</set>-->
+			<!--<list>-->
+				<!--<bean class="com.epai.common.conversion.TrimConverter"/>-->
+			<!--</list>-->
 		<!--</property>-->
 	<!--</bean>-->
+
 </beans>
