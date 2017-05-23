@@ -6,6 +6,8 @@ import com.epai.core.pojo.user.Buyer;
 
 public interface BuyerService {
 	public Buyer selectBuyerByUsername(String username);
+
+	public void insertBuyer(String username,String password,String email);
 	
 	public void insertBuyerCartToRedis(BuyerCart buyerCart, String username);
 
