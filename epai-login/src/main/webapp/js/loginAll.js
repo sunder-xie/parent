@@ -6,7 +6,7 @@ function CheckLog()
 		//alert("请输入用户名！");
 		$("#username").focus();
 		$("#b1").css('display','block');
-		$("#b1").html("请输入手机号！");
+		$("#b1").html("请输入用户名！");
 		return false;
 	}
 	if($("#password").val() == "")
@@ -19,53 +19,48 @@ function CheckLog()
 	}
 	return true;
 	
-	if($("#code").val() == "")
+	/*if($("#code").val() == "")
 	{
 		//alert("请输入密码！");
 		$("#code").focus();
-		$("#b3").css('display','block');
-		$("#b3").html("请输入验证码！");
+		/!*$("#b3").css('display','block');
+		$("#b3").html("请输入验证码！");*!/
 		return false;
-	}
+	}*/
 	return true;
 }
 
-//检测手机
-function checkMobile(){
-	var mobile = /(^1[3|4|5|7|8][0-9]{9}$)/;
+//检测用户名
+function checkUsername1(){
+	//var mobile = /(^1[3|4|5|7|8][0-9]{9}$)/;
 	if($("#registerUserName").val() == ""){
 		$("#registerUserName").focus();
-		$("#errorRegister").html("手机号码不能为空！");
+		$("#errorRegister").html("用户名不能为空！");
 		return false;
-	}else if(!mobile.test($("#registerUserName").val()))
-	{
-		$("#registerUserName").focus();
-		$("#errorRegister").html("请输入正确手机号码");
-		return false;
-	}else{		
+	}else{
 		return true;
 	}
 }
 
 //检测用户名
-//function checkUsername(){
-//	var ckuname = /^[0-9a-zA-Z_@\.-]+$/;
-//	if($("#registerUserName").val() == ""){
-//		$("#registerUserName").focus();
-//		$("#errorRegister").html("用户名不能为空！");
-//		return false;
-//	}else if($("#registerUserName").val().length < 6 || $("#registerUserName").val().length > 16){	
-//		$("#registerUserName").focus();
-//		$("#errorRegister").html("用户名长度为6~16位字符！"); 
-//		return false;
-//	}else if(!ckuname.test($("#registerUserName").val())){
-//		$("#registerUserName").focus();
-//		$("#errorRegister").html("用户名请使用[数字/字母]"); 
-//		return false;
-//	}else{       
-//     return true;
-//  }
-//}
+function checkUsername2(){
+	var ckuname = /^[0-9a-zA-Z_@\.-]+$/;
+	if($("#registerUserName").val() == ""){
+		$("#registerUserName").focus();
+		$("#errorRegister").html("用户名不能为空！");
+		return false;
+	}else if($("#registerUserName").val().length < 6 || $("#registerUserName").val().length > 16){
+		$("#registerUserName").focus();
+		$("#errorRegister").html("用户名长度为6~16位字符！");
+		return false;
+	}else if(!ckuname.test($("#registerUserName").val())){
+		$("#registerUserName").focus();
+		$("#errorRegister").html("用户名请使用[数字/字母]");
+		return false;
+	}else{
+    return true;
+ }
+}
 //检测密码
 function checkPassword(){
 	var ckupwd = /^[0-9a-zA-Z_-]+$/;
@@ -99,6 +94,21 @@ function checkRepassword(){
 	}else{
 		return true;
 	}
+}
+//检测邮箱
+function checkEmail(){
+     var ckuname = /^[a-z0-9]+([._\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+    if($("#registerEmail").val() == ""){
+        $("#registerEmail").focus();
+        $("#errorRegister").html("邮箱不能为空！");
+        return false;
+    }else if(!ckuname.test($("#registerEmail").val())){
+        $("#registerEmail").focus();
+        $("#errorRegister").html("邮箱格式不正确");
+        return false;
+    }else{
+        return true;
+    }
 }
 //检测验证码
 function checkValidate(){

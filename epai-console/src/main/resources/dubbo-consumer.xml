@@ -27,22 +27,22 @@
 	<!-- <dubbo:registry address="192.168.200.128:2181" protocol="zookeeper"/> -->
 	<dubbo:registry address="N/A"/>
 	<!-- 配置调用或引用接口 -->
-	<dubbo:reference interface="com.epai.core.service.TestService" id="testService"
+	<!--<dubbo:reference interface="com.epai.TestService" id="testService"
+					 url="dubbo://127.0.0.1:20880"/>-->
+	<dubbo:reference interface="com.epai.core.service.product.BrandService" id="brandService"
 		url="dubbo://127.0.0.1:20880"/>
-	<!--<dubbo:reference interface="com.itheima.core.service.product.BrandService" id="brandService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
-	<!--<dubbo:reference interface="com.itheima.core.service.product.UploadService" id="uploadService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
-	<!--<dubbo:reference interface="com.itheima.core.service.product.ProductService" id="productService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
-	<!--<dubbo:reference interface="com.itheima.core.service.product.ColorService" id="colorService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
-	<!--<dubbo:reference interface="com.itheima.core.service.product.SkuService" id="skuService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
-	<!--<dubbo:reference interface="com.itheima.core.service.ad.PositionService" id="positionService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
-	<!--<dubbo:reference interface="com.itheima.core.service.ad.AdService" id="adService"-->
-		<!--url="dubbo://127.0.0.1:20880"/>-->
+	<dubbo:reference interface="com.epai.core.service.product.UploadService" id="uploadService"
+		url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference interface="com.epai.core.service.product.ProductService" id="productService"
+		url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference interface="com.epai.core.service.product.ColorService" id="colorService"
+		url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference interface="com.epai.core.service.product.SkuService" id="skuService"
+		url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference interface="com.epai.core.service.ad.PositionService" id="positionService"
+		url="dubbo://127.0.0.1:20880"/>
+	<dubbo:reference interface="com.epai.core.service.ad.AdService" id="adService"
+		url="dubbo://127.0.0.1:20880"/>
 	<!-- 全局设置超时时间 10min  -->
 	<dubbo:consumer timeout="600000" check="false"/>
 </beans>

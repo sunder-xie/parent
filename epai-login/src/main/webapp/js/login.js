@@ -66,13 +66,13 @@ $(function(){
 		  }
 	});
 	//获取推荐码的值
-	var regCode=getUrlParam("regCode");
+	/*var regCode=getUrlParam("regCode");
 	$("#regCode").val(regCode);
-	getValidateImg();
+	getValidateImg();*/
 });
 
 //倒计时
-var validCode=true;
+/*var validCode=true;
 function getVal(){
 	var time=60;
 	var code=$("#getCode");
@@ -92,7 +92,7 @@ function getVal(){
 			}
 		},1000);
 	}
-}
+}*/
 var namekey = "userName";                  
 var userkey = "userId";
 var tokenkey = "tokenId";
@@ -107,7 +107,7 @@ function getRegisterData(){
 		$("#errorRegister").html("协议没选中");
 		return false;
 	}		
-	if(checkPassword()&&checkRepassword()&&checkMobile()&&checkValidate()){	
+	if(checkUsername1()&&checkPassword()&&checkRepassword()&&checkEmail()){
 		var pwd=$("#registerPassword").val();
 		var pwdmd5= hex_md5(pwd);
 		var repassword=$("#repassword").val();
@@ -167,50 +167,50 @@ function getRegisterData(){
 }
 
 //获取短信验证码
-function getcode(){
-	if(checkMobile()){
-		var mobile = $("#registerUserName").val();
-		var picCode=$("#picCode").val();
-        var verificationCodeTemp=$("#verificationCodeTemp").val();
-		if(picCode ==""){
-			alert("请输入图片中的验证码");
-			return;
-		}
-		if(mobile!=null&&mobile!=""&&mobile!=undefined){
-			$.ajax({
-				cache : true,
-				type : "post",
-				url : VerificationCodeUrl,
-				data : {
-					"sourceMode":"PC",
-					"mobile":mobile,
-					"picCode":picCode,
-                    "verificationCodeTemp":verificationCodeTemp
-				},
-				dataType : "text",
-				error : function() {
-					//alert("出现错误，请联系管理员");
-				},
-				success : function(data) {
-					var data = eval("("+data+")");
-					if(data.code=="0000"){
-						getVal();
-						$("#errorRegister").html("验证码已发送");
-						
-					}else{
-                        getValidateImg();
-						alert(data.message);
-					}
-				}
-			});
-			
-		}else{
-			alert("手机号码有误，请确认");
-		}
-	}	
-}
+// function getcode(){
+// 	if(checkMobile()){
+// 		var mobile = $("#registerUserName").val();
+// 		var picCode=$("#picCode").val();
+//         var verificationCodeTemp=$("#verificationCodeTemp").val();
+// 		if(picCode ==""){
+// 			alert("请输入图片中的验证码");
+// 			return;
+// 		}
+// 		if(mobile!=null&&mobile!=""&&mobile!=undefined){
+// 			$.ajax({
+// 				cache : true,
+// 				type : "post",
+// 				url : VerificationCodeUrl,
+// 				data : {
+// 					"sourceMode":"PC",
+// 					"mobile":mobile,
+// 					"picCode":picCode,
+//                     "verificationCodeTemp":verificationCodeTemp
+// 				},
+// 				dataType : "text",
+// 				error : function() {
+// 					//alert("出现错误，请联系管理员");
+// 				},
+// 				success : function(data) {
+// 					var data = eval("("+data+")");
+// 					if(data.code=="0000"){
+// 						getVal();
+// 						$("#errorRegister").html("验证码已发送");
+//
+// 					}else{
+//                         getValidateImg();
+// 						alert(data.message);
+// 					}
+// 				}
+// 			});
+//
+// 		}else{
+// 			alert("手机号码有误，请确认");
+// 		}
+// 	}
+// }
 //获取图片验证码
-function getValidateImg(){
+/*function getValidateImg(){
 //	$("#picCodeImg ,#picCodeImgLogin").attr("src",ValidateImgUrl+"?n="+Math.floor(Math.random()*100));
 	$.ajax({
         type: "POST",
@@ -222,10 +222,15 @@ function getValidateImg(){
             $("#picCodeImg ,#picCodeImgLogin").attr('src', ValidateImgUrl+"?getVerificationCodeTemp="+msg+"&n="+Math.floor(Math.random()*100));
         }
     });
-}    
+}   */
 
 // 登录方法
-function subLogin(){
+function subLogin() {
+    if(CheckLog()){
+        $("#loginForm").submit();
+    }
+}
+/*function subLogin(){
 	if(CheckLog()){
 		var mobile = $("#username").val();
 		var pwd=$("#password").val();
@@ -279,7 +284,7 @@ function subLogin(){
 		   	}
 		});
 	}
-}
+}*/
 
 function closeBox() {
     promptHide();

@@ -23,7 +23,7 @@
 	<!-- 扫描 -->	
 	<context:component-scan base-package="com.epai"/>
 	<!-- 注解驱动 -->
-	<mvc:annotation-driven/> <!--conversion-service="conversionServiceFactoryBean"/>-->
+	<mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>
 	
 	<import resource="dubbo-consumer.xml"/>
 	
@@ -32,15 +32,15 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	<!-- 上传图片实现类 -->
-	<!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
 	<!-- 转换器工厂 -->
-	<!--<bean id="conversionServiceFactoryBean" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
-		<!--&lt;!&ndash; 转换器集 &ndash;&gt;-->
-		<!--<property name="converters">-->
-			<!--<list>-->
-				<!--<bean class="com.epai.common.conversion.TrimConverter"/>-->
-			<!--</list>-->
-		<!--</property>-->
-	<!--</bean>-->
+	<bean id="conversionServiceFactoryBean" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<!-- 转换器集 -->
+		<property name="converters">
+			<set>
+				<bean class="com.epai.common.conversion.TrimConverter"/>
+			</set>
+		</property>
+	</bean>
 
 </beans>

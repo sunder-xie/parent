@@ -6,16 +6,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.epai.core.dao.TestTbDao;
 import com.epai.core.pojo.TestTb;
-import com.epai.core.service.TestService;
 
 @Service("testService")
 @Transactional
-public class TestServiceImpl implements TestService{
+public class TestServiceImpl {/*implements TestService{*/
 
 	@Autowired
 	private TestTbDao dao;
 
-	@Override
+	/*@Override*/
 	public void insertTb(TestTb tb) {
 		dao.insertTb(tb);
 //		int a = 10/0;

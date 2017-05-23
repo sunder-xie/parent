@@ -18,7 +18,14 @@
 .header_top li a:hover{
 	color: #FFFFFF;
 }
-
+.msg-wrap{
+	min-height:31px;
+	height:auto!important;
+	height:31px;
+	margin:2px 0 5px
+}
+.msg-warn{position:relative;background:#fff6d2;color:#666;border:1px solid #ffe57d;padding:3px 10px 3px 40px;line-height:18px;height:18px}
+.msg-warn b{position:absolute;top:50%;left:10px;display:block;margin-top:-8px;width:16px;height:17px;overflow:hidden;background:url(//miscssl.360buyimg.com/user/passport-2015/widget/login-form/i/pwd-icons-new.png) -104px -22px no-repeat}
 .headerUl1 li a:hover img.header_san {
 	transform: rotate(90deg);
 }
