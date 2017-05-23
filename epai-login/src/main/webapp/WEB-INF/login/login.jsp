@@ -17,7 +17,7 @@
 		<div class="loginHeader">
 			<div class="header_top">
 				<a href="888888/index.html">
-					<img src="/images/logo.png.png.png" class="fl header_logo">
+					<img src="/images/logo.png" class="fl header_logo">
 				</a>
 				<ul class="headerUl1 fr">
 					<li><a href="888888/index.html">返回首页</a></li>
@@ -76,15 +76,16 @@
 					</div>
 					<!--注册-->
 					<div class="registerDiv hide">
+						<form id="registerForm" action="/register.aspx" method="post">
 						<div id="errorRegister"></div>
 						<p class="loginTel">
-							<input type="text" placeholder="请输入用户名" id="registerUserName">
+							<input type="text" placeholder="请输入用户名" id="registerUserName" name="username">
 						</p>
 						<p class="loginTel">
-							<input type="text" placeholder="请输入邮箱" id="registerEmail">
+							<input type="text" placeholder="请输入邮箱" id="registerEmail" name="email">
 						</p>
 						<p class="loginTel">
-							<input type="password" placeholder="设置密码 : 长度为6~16位字符" id="registerPassword">
+							<input type="password" placeholder="设置密码 : 长度为6~16位字符" id="registerPassword" name="password">
 						</p>
 						<p class="loginTel">
 							<input type="password" placeholder="确认密码" id="repassword">
@@ -114,6 +115,8 @@
 						</p>
 						<p class="loginLog" style="margin-top:0px; margin-bottom: 0;" onclick="getRegisterData()">立即注册</p>
 					</div>
+				   </form>
+				</div>
 				</div>
 			</div>
 		</div>

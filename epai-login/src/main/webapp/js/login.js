@@ -109,57 +109,17 @@ function getRegisterData(){
 	}		
 	if(checkUsername1()&&checkPassword()&&checkRepassword()&&checkEmail()){
 		var pwd=$("#registerPassword").val();
-		var pwdmd5= hex_md5(pwd);
+		//var pwdmd5= hex_md5(pwd);
 		var repassword=$("#repassword").val();
-		var mobile = $("#registerUserName").val();
-		var validate = $("#validate").val();
-		var picCode=$("#picCode").val();
-		var regCode=$("#regCode").val();
-		var verificationCodeTemp=$("#verificationCodeTemp").val();
-		var urlLoction=document.referrer;
+		//var mobile = $("#registerUserName").val();
+		//var validate = $("#validate").val();
+		//var picCode=$("#picCode").val();
+		//var regCode=$("#regCode").val();
+		//var verificationCodeTemp=$("#verificationCodeTemp").val();
+		//var urlLoction=document.referrer;
 		if(pwd==repassword){
-			$.ajax({
-				cache : true,
-				type : "post",
-				url : registerUrl,
-				data : {
-					"sourceMode":"PC",
-					"userID":userId,
-					"tokenId":tokenId,
-					"mobile":mobile ,
-					"pwd":pwdmd5,
-					"picCode":picCode,
-					"messageCode":validate,
-					"verificationCodeTemp":verificationCodeTemp,
-					"regCode":regCode
-				},// 你的formid
-				dataType : "text",
-				error : function(data) {
-					//alert("出现错误，请联系管理员");
-				},
-				success : function(data) {
-					var data = eval("("+data+")");
-					if(data.code == "0000"){
-						storage.setItem(userkey, data.userID);  
-						storage.setItem(tokenkey, data.tokenId);  
-						storage.setItem(namekey, data.userName);
-		                storage.setItem(mobilekey, data.mobile);
-		                storage.setItem(isManagerkey, data.isManager);
-                   		storage.setItem(isChannelkey, data.isChannel);
-		                if(urlLoction.indexOf("detail.html") > -1){
-			    	   		self.location=document.referrer;
-			    	    }else if(urlLoction.indexOf("lightDetail.html") > -1){
-			    	   		self.location=document.referrer;
-			    	    }
-		                else{
-			    	   		window.location.href="registerSuccess.html";
-			    	    }
-					}
-					else{
-						alert(data.message);
-					}
-				}
-			});
+			alert("heihei");
+			$("#registerForm").submit();
 		}else{
 			alert("两次密码输入不一致");
 		}

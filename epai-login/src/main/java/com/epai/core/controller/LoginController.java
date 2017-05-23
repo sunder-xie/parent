@@ -67,7 +67,7 @@ public class LoginController {
 			byte[] digest = instance.digest(password.getBytes());
 			encodeHex = Hex.encodeHex(digest);
 		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		return new String(encodeHex);
