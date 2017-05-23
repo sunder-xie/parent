@@ -52,6 +52,16 @@ public class BuyerServiceImpl implements BuyerService{
 		}
 		return null;
 	}
+
+	@Override
+	public void insertBuyer(String username, String password, String email) {
+        Buyer buyer = new Buyer();
+        buyer.setUsername(username);
+        buyer.setPassword(password);
+        buyer.setEmail(email);
+        buyerDao.insert(buyer);
+	}
+
 	public Sku selectSkuById(Long skuId){
 		Sku sku = skuDao.selectByPrimaryKey(skuId);
 		sku.setProduct(productDao.selectByPrimaryKey(sku.getProductId()));
