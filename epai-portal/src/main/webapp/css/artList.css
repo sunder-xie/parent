@@ -1,0 +1,250 @@
+.listNav{
+	line-height: 40px;
+	color: #666666;
+	font-size: 12px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.listNav a{
+	color: #666666;
+}
+.listDiv{
+	width: 1200px;
+	margin:0 auto;
+	font-size: 14px;
+	color: #666666;
+}
+.listDivD1{
+	border: 1px solid #F3F3F3;
+	line-height: 50px;
+	/*
+	max-height: 150px;
+	overflow: hidden;*/
+	background: #F3F3F3;
+}
+.listDivD1>p{
+	text-align: center;
+	width: 100px;
+	background:#f3f3f3;
+	height: 50px;
+}
+.listDivUl1{
+	width: 1079px;
+	float: right;
+	background: #FFFFFF;
+	line-height: 50px;
+}
+.listDivUl1>li{
+	float: left;
+	padding-left: 40px;
+	cursor: pointer;
+}
+.listDivUl1>li:hover{
+	color: #463B7F;
+}
+.listDivUl1>li.active{
+	color: #463B7F;
+	font-weight: bold;
+}
+.listDivUl2{
+	margin-top: 15px;
+	line-height: 50px;
+	background: #F3F3F3;
+	max-height: 200px;
+	overflow: auto;
+}
+.listDivUl2>li{
+	background: #F3F3F3;
+}
+.listDivUl2>li>p{
+	width: 100px;
+	background: #F3F3F3;
+	text-align: center;
+	float: left;
+	line-height: 50px;
+}
+.listDivUl2>li>div{
+	float:right;
+	background: #FFFFFF!important;
+	width: 1080px;
+	border: 1px solid #f3f3f3;
+}
+.listDivUl2>li>div>p{
+	width: 1080px;
+	float: left;
+}
+.listDivUl2>li>div a{
+	display: block;
+	float: left;
+	padding-left: 40px;
+	color: #666666;
+}
+.listDivUl2>li>div a:hover{
+	color: #463B7F;
+}
+.watchDivD2P>a.active{
+	color: #463B7F;
+	font-weight:bold;
+}
+/**Ã¤Â»Â·Ã¦Â Â¼Ã¦Å½â€™Ã¥ÂºÂÃ©Æ’Â¨Ã¥Ë†â€ */
+.sortDiv{
+	width: 1200px;
+	margin:0 auto;
+	height: 50px;
+	background: #F3F3F3;
+	line-height: 50px;
+	margin-top: 15px;
+	font-size: 14px; 
+	color: #666666;
+}
+.sortDiv>p{
+	padding: 0 30px;
+	display: inline-block;
+	float: left;
+}
+.sortDiv>ul li{
+	float: left;
+	cursor: pointer;
+	padding: 0 30px;
+}
+.sortDiv>ul li.active{
+	color: #463A7E;
+	font-weight: bold;
+}
+.sortDiv>ul li:hover{
+	color: #463B7F;
+}
+/*Ã¥Ë†â€”Ã¨Â¡Â¨Ã©Æ’Â¨Ã¥Ë†â€ */
+.auctionLi{
+	width:1200px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.auctionList{
+	margin-right: -20px;
+}
+.auctionList dl{
+	border:16px solid #FFFFFF;
+	width:255px;
+	height: 360px;
+	float: left;
+	margin-right: 17.5px;
+	margin-bottom: 17.5px;
+}
+.auctionList dl:hover{
+	border:16px solid #F3F3F3;
+	/*box-shadow: 0 0 10px #999;*/
+}
+.auctionList dl:hover dd{
+	background: #F3F3F3;
+}
+.auctionList dl dt{
+	width:255px;
+	height:255px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+}
+.auctionList dl dt p a{
+	position: absolute;
+	display: block;
+}
+.auctionList dl dt p a.sale2_abs2{
+	right:10px;
+	bottom:15px;
+}
+.auctionList dl dt p a.sale2_abs1{
+	left:10px;
+	bottom:15px;
+}
+.auctionList dl dt img{
+	max-width:255px;
+	max-height:255px;
+}
+.auctionList dl dd{
+	width:245px;
+	padding:0 5px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #666666;
+}
+.auctionList dl dd p{
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.auctionList dl dd p:first-child{
+	color: #333333;
+}
+.auctionList dl dd p:last-child{
+	/*background: #FFFFFF;*/
+	width: 265px;
+	margin-left: -10px;
+	text-indent: 10px;
+	line-height: 30px;
+}
+.auctionList dl dd p.auctionListP1 span{
+	color:#E93B39;
+}
+.auctionList dl dd p.auctionListP1 a span:hover{
+	color:#993333;
+}
+.auctionList dl dd p.auctionListP1{
+	color: #333333;
+}
+.artListMore{
+	text-align: center;
+}
+.artListMore a{
+	color: #666666;
+}
+/**展示更多**/
+.showMore{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	color: #555555;
+	display: none;
+}
+.showMore:hover{
+	color: #463B7F;
+}
+
+
+/**小分页部分**/
+.pageSmall {
+    float: right;
+    margin-right: 46px;
+    margin-top: 2px;
+    width: 70px;
+    text-align: center;
+}
+#pageSmall>span{
+	display: none;
+}
+.pageSmall>span:first-child{
+	color: #E93B39;
+}
+#pageSmall a.glyphicon-chevron-left,#pageSmall a.glyphicon-chevron-right{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #CDCDCD;
+	font-size: 24px;
+	color: #999;
+	text-align: center;
+	line-height: 22px;
+	cursor: pointer;
+}
+#pageSmall a.glyphicon-chevron-left {
+    position: absolute;
+    right: 120px;
+    top: 12px;
+}
+#pageSmall a.glyphicon-chevron-right {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}

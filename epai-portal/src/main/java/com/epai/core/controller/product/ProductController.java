@@ -43,7 +43,7 @@ public class ProductController {
 	@RequestMapping("/search")
 	public String list(Integer pageNo,String keyword,Long brandId,String price,Model model) throws Exception{
 		//加载品牌结果集,从redis中查询
-		List<Brand> brands = searchService.selectBrandList();
+		/*List<Brand> brands = searchService.selectBrandList();
 		model.addAttribute("brands", brands);
 		
 		Pagination pagination = searchService.selectPaginationByQuery(pageNo, keyword,brandId,price);
@@ -70,7 +70,7 @@ public class ProductController {
 			}
 		}
 		
-		model.addAttribute("map", map);
+		model.addAttribute("map", map);*/
 		return "search";
 	}
 	@RequestMapping("/product/detail")
