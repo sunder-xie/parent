@@ -107,7 +107,7 @@ function getRegisterData(){
 		$("#errorRegister").html("协议没选中");
 		return false;
 	}		
-	if(checkUsername1()&&checkPassword()&&checkRepassword()&&checkEmail()){
+	if(checkUsername1()&&checkPassword()&&checkRepassword()&&checkEmail()&&checkDrag()){
 		var pwd=$("#registerPassword").val();
 		//var pwdmd5= hex_md5(pwd);
 		var repassword=$("#repassword").val();
@@ -118,7 +118,6 @@ function getRegisterData(){
 		//var verificationCodeTemp=$("#verificationCodeTemp").val();
 		//var urlLoction=document.referrer;
 		if(pwd==repassword){
-			alert("heihei");
 			$("#registerForm").submit();
 		}else{
 			alert("两次密码输入不一致");

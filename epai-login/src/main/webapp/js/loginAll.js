@@ -110,6 +110,15 @@ function checkEmail(){
         return true;
     }
 }
+//检测滑动验证
+function checkDrag(){
+	var isDrag = $("#drag_txt").html();
+	if(isDrag=="验证通过"){
+		return true;
+	}
+    $("#errorRegister").html("请拖动滑块验证");
+	return false;
+}
 //检测验证码
 function checkValidate(){
 	if($("#validate").val() == "")
